@@ -283,7 +283,7 @@ export const MCQTest: React.FC<MCQTestProps> = ({
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
-        className={cn("bg-[#0a0a0a] p-6 sm:p-8 rounded-xl shadow-lg border-0 relative max-w-2xl w-full overflow-y-auto overflow-x-hidden max-h-[90vh] hide-scrollbar", className)}
+        className={cn("bg-[#0a0a0a] p-8 sm:p-12 rounded-3xl shadow-lg border-0 relative w-full max-w-4xl h-full max-h-full flex flex-col", className)}
         role="region"
         aria-label="Quiz results"
         style={{ 
@@ -302,7 +302,7 @@ export const MCQTest: React.FC<MCQTestProps> = ({
             <span className="sr-only">Close</span>
           </button>
         )}
-        
+        <div className="flex-1 overflow-y-auto w-full">
         <div className="text-center mb-6">
           <div className="inline-flex items-center justify-center p-2 bg-white/5 rounded-full mb-4">
             <Trophy className="h-10 w-10 text-amber-400" />
@@ -369,7 +369,7 @@ export const MCQTest: React.FC<MCQTestProps> = ({
             );
           })}
         </div>
-        
+        </div>
         <div className="flex flex-wrap justify-center gap-3 mt-8">
           <Button 
             onClick={resetTest}
@@ -415,7 +415,7 @@ export const MCQTest: React.FC<MCQTestProps> = ({
 
   // Main quiz interface
   return (
-    <div className="h-full flex flex-col bg-[#0a0a0a] rounded-3xl overflow-hidden relative text-white p-1">
+    <div className="h-full flex flex-col bg-[#0a0a0a] rounded-3xl overflow-hidden relative text-white p-1 quiz-modal-content">
       {/* Progress bar */}
       <div className="absolute top-0 left-0 right-0 h-1 bg-white/5">
         <div 
@@ -466,7 +466,7 @@ export const MCQTest: React.FC<MCQTestProps> = ({
             transition={{ duration: 0.3 }}
             className="flex flex-col"
           >
-            <h2 className="text-lg sm:text-xl md:text-2xl font-medium text-white mb-4 md:mb-6">
+            <h2 className="text-lg sm:text-xl md:text-2xl font-medium text-white mb-4 md:mb-6 quiz-modal-question">
               {currentQuestion.question}
             </h2>
             
@@ -482,7 +482,7 @@ export const MCQTest: React.FC<MCQTestProps> = ({
                     onClick={() => handleOptionSelect(optionIndex)}
                     disabled={isTransitioning || selectedOptions[currentQuestionIndex] !== -1}
                     className={cn(
-                      "w-full text-left p-3 sm:p-4 rounded-xl transition-all border flex items-start gap-3 text-sm sm:text-base touch-manipulation",
+                      "w-full text-left p-3 sm:p-4 rounded-xl transition-all border flex items-start gap-3 text-sm sm:text-base touch-manipulation quiz-modal-option",
                       isSelected ? (
                         isCorrect 
                           ? "bg-emerald-500/10 border-emerald-500/30 text-white"
@@ -539,7 +539,7 @@ export const MCQTest: React.FC<MCQTestProps> = ({
       </div>
       
       {/* Footer with navigation */}
-      <div className="border-t border-white/10 p-3 sm:p-4 flex items-center justify-between">
+      <div className="border-t border-white/10 p-3 sm:p-4 flex items-center justify-between quiz-modal-footer">
         <div className="flex items-center gap-3">
           {selectedOptions[currentQuestionIndex] !== -1 && currentQuestion.explanation && (
             <button

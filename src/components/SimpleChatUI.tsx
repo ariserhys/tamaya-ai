@@ -506,7 +506,7 @@ const SimpleChatUI: React.FC<SimpleChatUIProps> = ({ initialQuestion = null, ini
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: 20, opacity: 0 }}
               transition={{ duration: 0.4, ease: [0.25, 0.4, 0.25, 1] }}
-              className="w-full max-w-2xl max-h-[90vh] bg-[#111] rounded-3xl shadow-2xl p-0 overflow-hidden border border-white/10 hide-scrollbar overscroll-contain"
+              className="w-full max-w-4xl max-h-[95vh] h-full bg-[#111] rounded-3xl shadow-2xl p-0 overflow-hidden border border-white/10 hide-scrollbar overscroll-contain flex flex-col"
               style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
             >
             <MCQTest

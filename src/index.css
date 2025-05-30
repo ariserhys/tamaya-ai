@@ -486,3 +486,38 @@
     page-break-inside: avoid;
   }
 }
+
+/* Quiz Modal Custom Styles */
+.quiz-modal-content {
+  height: 100%;
+  max-height: 100%;
+  overflow-y: auto;
+  font-size: 80%; /* 20% smaller */
+  padding-bottom: 1.5rem !important;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+.quiz-modal-question {
+  font-size: 1.1em;
+  margin-bottom: 1.2em;
+  line-height: 1.4;
+}
+.quiz-modal-option {
+  font-size: 1em;
+  margin-bottom: 0.7em;
+  padding: 0.7em 1em;
+  border-radius: 0.75em;
+}
+.quiz-modal-footer {
+  position: sticky;
+  bottom: 0;
+  background: #111;
+  padding: 0.7em 0 0.7em 0;
+  z-index: 2;
+}
+
+/* Remove unwanted space in quiz modal */
+.quiz-modal-content > *:last-child {
+  margin-bottom: 0 !important;
+}
