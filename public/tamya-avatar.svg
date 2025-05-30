@@ -1,0 +1,20 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient circle -->
+  <circle cx="60" cy="60" r="60" fill="url(#gradientBg)"/>
+  
+  <!-- Stylized graduation cap -->
+  <path d="M30 53L60 40L90 53L60 66L30 53Z" fill="white" fill-opacity="0.9"/>
+  <path d="M60 66L90 53V75C90 75 75 85 60 85C45 85 30 75 30 75V53L60 66Z" fill="white" fill-opacity="0.7"/>
+  <line x1="80" y1="58" x2="80" y2="72" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="80" cy="75" r="3" fill="white"/>
+  
+  <!-- T letter for Tamaya -->
+  <path d="M47 30H73M60 30V50" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <defs>
+    <linearGradient id="gradientBg" x1="0" y1="0" x2="120" y2="120" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0077ED"/>
+      <stop offset="1" stop-color="#0071E3"/>
+    </linearGradient>
+  </defs>
+</svg> 

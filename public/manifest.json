@@ -1,0 +1,19 @@
+{
+  "name": "TAMAYA - AI Study Assistant",
+  "short_name": "TAMAYA",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/apple-touch-icon.svg",
+      "sizes": "180x180",
+      "type": "image/svg+xml"
+    }
+  ],
+  "theme_color": "#0071E3",
+  "background_color": "#030303",
+  "display": "standalone"
+} 
